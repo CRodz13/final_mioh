@@ -58,68 +58,64 @@ font-weight: bold;
 padding-bottom: 100px;
 }
 @media (max-width: 544px) {
-.social-links {
-  padding-bottom: 40px;
-}
-}
-@media (max-width: 768px) {
-.social-links {
-  padding-bottom: 80px;
-}
+  .social-links {
+    padding-bottom: 40px;
+  }
+  .p-heading {
+    font-size: 20px;
+    padding-bottom: 18px;
+  }
+  #connect {
+    font-size: 15px;
+  }
+  .cape-img {
+    width: 100%;
+    margin-top: -60px;
+    padding-bottom: 20px;
+  }
+  .footer-content {
+    font-size: 13px;
+  }
+  .footer {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    position: fixed;
+    bottom:0;
+    width:100%;
+  }
 }
 
-@media (max-width: 544px) {
-.p-heading {
-  font-size: 20px;
-  padding-bottom: 18px;
-}
-}
 @media (max-width: 768px) {
-.p-heading {
-  font-size: 30px;
-  padding-bottom: 120px
-}
+  .social-links {
+    padding-bottom: 80px;
+  }
+  .p-heading {
+    font-size: 30px;
+    padding-bottom: 120px
+  }
+  #connect {
+    font-size: 35px;
+  }
+  .cape-img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .footer {
+    position: fixed;
+    width: 100%;
+  }
 }
 
 @media (min-width: 1280px) {
-.p-heading {
-  font-size: 50px;
-  padding-top: 40px;
-  padding-bottom: 120px;
-}
-}
-
-@media (max-width: 544px) {
-#connect {
-  font-size: 15px;
-}
-}
-@media (max-width: 768px) {
-#connect {
-  font-size: 35px;
-}
-}
-
-@media (min-width: 1280px) {
-.cape-img {
-  width: 90%;
-  padding-top: 20px;
-}
-}
-
-@media (max-width: 768px) {
-.cape-img {
-  width: 100%;
-  padding-bottom: 20px;
-}
-}
-
-@media (max-width: 544px) {
-.cape-img {
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
+  .p-heading {
+    font-size: 50px;
+    padding-top: 40px;
+    padding-bottom: 120px;
+  }
+  .cape-img {
+    width: 90%;
+    padding-top: 20px;
+  }
 }
 
 .row .p-heading {
@@ -127,6 +123,37 @@ width: 100%;
 padding-bottom: 100px;
 }
 
+.container-fluid {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
 
 /*--------------------------------------------------------------
 # Desktop Navigation
@@ -470,7 +497,8 @@ bg img
 }
 
 .footer .footer-content {
-  padding: 12px 0;
+  padding: 24px;
+  width: 100%;
 }
 
 /*--------------------------------------------------------------
