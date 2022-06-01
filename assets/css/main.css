@@ -350,9 +350,12 @@ footer .copyright {
     display: none;
   }
   .footer {
-    width: 100%;
-    height: auto;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:auto; 
   }
+
   .social-links i {
     font-size: 35px;
   }
