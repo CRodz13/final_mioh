@@ -18,6 +18,12 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  opacity: 1;
+  transition-duration: 0.7s;
+  transition-property: opacity;
+}
+body.fade {
+  opacity: 0;
 }
 
 .section-p1 {
@@ -242,7 +248,14 @@ footer .copyright {
   background: rgba(19, 19, 19, 0.4);
   font-size: 16px;
   background-color: rgba(19, 19, 19, 0.4);
-  padding: 20px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .footer .footer-content {
