@@ -246,7 +246,6 @@ footer .copyright {
 
 
 /* Start Media Query */
-
 @media (max-width: 575.98px) {
   #hero .cape-img {
     width: 100%;
