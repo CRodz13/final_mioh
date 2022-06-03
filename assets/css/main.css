@@ -269,7 +269,9 @@ footer .copyright {
   .footer {
     width:100%;
     font-size: 10px;
-
+  }
+  #particles-js {
+    height: 70%;
   }
 }
 
