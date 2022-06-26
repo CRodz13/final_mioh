@@ -126,6 +126,17 @@ body {
   padding: 0 0 80px;
 }
 
+#contact-form {
+  margin-bottom: 10px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.form-label {
+
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -200,7 +211,7 @@ footer .copyright {
 
 @media (max-width: 575.98px) {
   #particles-js {
-    height: 70%;
+    height: 1000vh;
   }
   #hero h1 {
     font-size: 29px;

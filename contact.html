@@ -1,113 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>MUSIC IS OUR HERO®!</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-  <title>MUSIC IS OUR HERO®!</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" rel="icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/logo.png" rel="icon">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Caveat&family=Pacifico&family=Square+Peg&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Caveat&family=Pacifico&family=Square+Peg&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
 
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="assets/css/main.css" rel="stylesheet" />
 
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("Xy3S_7E4S-PuJZQGH");
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm("service_l32iruv", "template_c1v7i6d", this).then(
+              function () {
+                console.log("SUCCESS!");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+  </head>
 
-  <link href="assets/css/main.css" rel="stylesheet">
-</head>
-
-<body>
-
-<!-- ======= Navbar ======= -->
-<section id="header">
-  <div class="container-fluid shadow-sm p-3 bg-body">
-      <ul id="navbar">
-          <li><a class="active" href="index.html"><i class="fa-solid fa-house"></i></a></li>
-          <li><a href="contact.html"><i class="fa-solid fa-message"></i></a></li>
-          <li id="lg-bag"><a href="store.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+  <body>
+    <!-- ======= Navbar ======= -->
+    <section id="header">
+      <div class="container-fluid shadow-sm p-3 bg-body">
+        <ul id="navbar">
+          <li>
+            <a class="active" href="index.html"
+              ><i class="fa-solid fa-house"></i
+            ></a>
+          </li>
+          <li>
+            <a href="contact.html"><i class="fa-solid fa-message"></i></a>
+          </li>
+          <li id="lg-bag">
+            <a href="store.html"><i class="fa-solid fa-bag-shopping"></i></a>
+          </li>
           <a href="#" id="close"><i class="far fa-x"></i></a>
-      </ul>
-  </div>
-  <div id="mobile">
-      <a href="store.html"><i class="fa-solid fa-bag-shopping"></i></a>
-      <i id="bar" class="fa-solid fa-align-justify"></i>
-  </div>
-</section>
-
-
-<!-- Wrapper container -->
-<div class="container py-4">
-
-    <!-- Bootstrap 5 starter form -->
-    <form id="contactForm">
-  
-      <!-- Name input -->
-      <div class="mb-3">
-        <label class="form-label" for="name"></label>
-        <input class="form-control" name="name" id="name" type="text" placeholder="Name" data-sb-validations="required" />
-        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+        </ul>
       </div>
-  
-      <!-- Email address input -->
-      <div class="mb-3">
-        <label class="form-label" for="emailAddress"></label>
-        <input class="form-control" name=email id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
-        <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-        <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+      <div id="mobile">
+        <a href="store.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <i id="bar" class="fa-solid fa-align-justify"></i>
       </div>
-  
-      <!-- Message input -->
-      <div class="mb-3">
-        <label class="form-label" for="message"></label>
-        <textarea class="form-control" name="message" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
-        <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
-      </div>
-  
-      <!-- Form submissions success message -->
-      <div class="d-none" id="submitSuccessMessage">
-        <div class="text-center mb-3">Form submission successful!</div>
-      </div>
-  
-      <!-- Form submissions error message -->
-      <div class="d-none" id="submitErrorMessage">
-        <div class="text-center text-danger mb-3">Error sending message!</div>
-      </div>
-  
-      <!-- Form submit button -->
-      <div class="d-grid">
-        <button class="btn btn-primary btn-lg" type="submit">Submit</button>
-      </div>
-  
-    </form>
-  
-  </div>
+    </section>
 
+    <!-- Wrapper container -->
+    <div class="container py-1 shadow-lg p-3 mb-1 bg-body rounded">
+      <!-- Bootstrap 5 starter form -->
+      <form id="contact-form">
+        <input type="hidden" name="contact_number" />
 
+        <!-- Name input -->
+        <div class="mb-3">
+          <label class="form-label" for="name"></label>
+          <input
+            class="form-control"
+            name="name"
+            id="name"
+            type="text"
+            placeholder="Name"
+            data-sb-validations="required"
+          />
+          <div class="invalid-feedback" data-sb-feedback="name:required">
+            Name is required.
+          </div>
+        </div>
 
+        <!-- Email address input -->
+        <div class="mb-3">
+          <label class="form-label" for="emailAddress"></label>
+          <input
+            class="form-control"
+            name="email"
+            id="emailAddress"
+            type="email"
+            placeholder="Email Address"
+            data-sb-validations="required, email"
+          />
+          <div
+            class="invalid-feedback"
+            data-sb-feedback="emailAddress:required"
+          >
+            Email Address is required.
+          </div>
+          <div class="invalid-feedback" data-sb-feedback="emailAddress:email">
+            Email Address Email is not valid.
+          </div>
+        </div>
 
+        <!-- Message input -->
+        <div class="mb-3">
+          <label class="form-label" for="message"></label>
+          <textarea
+            class="form-control"
+            name="message"
+            id="message"
+            type="text"
+            placeholder="Message"
+            style="height: 10rem"
+            data-sb-validations="required"
+          ></textarea>
+          <div class="invalid-feedback" data-sb-feedback="message:required">
+            Message is required.
+          </div>
+        </div>
 
-    
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <!-- Form submissions success message -->
+        <div class="d-none" id="submitSuccessMessage">
+          <div class="text-center mb-3">Form submission successful!</div>
+        </div>
 
-  <!-- Vendor JS Files -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="assets/js/particles.min.js"></script>
-  <script src="assets/js/app.js"></script>
+        <!-- Form submissions error message -->
+        <div class="d-none" id="submitErrorMessage">
+          <div class="text-center text-danger mb-3">Error sending message!</div>
+        </div>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/script.js"></script>
-  
+        <!-- Form submit button -->
+        <div class="d-grid">
+          <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
 
-</body>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
 
+    <!-- Vendor JS Files -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
-
